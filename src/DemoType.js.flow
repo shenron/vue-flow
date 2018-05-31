@@ -2,5 +2,5 @@
 
 export type DemoType = {
   str: string,
-  func?: function,
+  func?: Function,
 };

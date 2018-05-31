@@ -1,7 +1,7 @@
 // @flow
 
 import Vue from 'vue';
-import App from './App.vue';
+import App from '@/App.vue';
 import type { DemoType } from './DemoType.js.flow';
 
 Vue.config.productionTip = false;

@@ -1,10 +1,12 @@
 [libs]
+flow-typed
 
 [options]
 include_warnings=true
 esproposal.decorators=ignore
 module.file_ext=.vue
 module.file_ext=.js
+module.name_mapper='^@/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 
 [ignore]
 ./node_modules/.*
