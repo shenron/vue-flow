@@ -13,7 +13,7 @@ export default class HelloWorld extends Vue {
   msgEnd:string = '!!!'
 
   // lifecycle
-  created() {
+  created(): void {
     this.printInConsole('Im created');
   }
 
