@@ -3,15 +3,26 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
+  extends: [
     'plugin:vue/essential',
-    '@vue/airbnb'
+    '@vue/airbnb',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'flowtype-errors/show-errors': 2,
+    'flowtype-errors/show-warnings': 1
   },
   parserOptions: {
     parser: 'babel-eslint'
+  },
+  plugins: [
+    'flowtype',
+    'flowtype-errors'
+  ],
+  settings: {
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true
+    }
   }
 }

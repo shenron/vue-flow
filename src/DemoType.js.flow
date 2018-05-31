@@ -1,0 +1,6 @@
+// @flow
+
+export type DemoType = {
+  str: string,
+  func: function,
+};

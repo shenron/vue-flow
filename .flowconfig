@@ -1,0 +1,13 @@
+[libs]
+
+[options]
+include_warnings=true
+esproposal.decorators=ignore
+module.file_ext=.vue
+module.file_ext=.js
+
+[ignore]
+./node_modules/.*
+./coverage/.*
+
+[include]
