@@ -12,7 +12,8 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'flowtype-errors/show-errors': 2,
-    'flowtype-errors/show-warnings': 1
+    'flowtype-errors/show-warnings': 1,
+    'class-methods-use-this': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
