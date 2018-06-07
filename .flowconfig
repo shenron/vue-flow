@@ -11,5 +11,7 @@ module.name_mapper='^@/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 [ignore]
 ./node_modules/.*
 ./coverage/.*
+./dist/.*
+./public/.*
 
 [include]

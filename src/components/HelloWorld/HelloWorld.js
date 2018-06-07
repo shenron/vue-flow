@@ -1,16 +1,14 @@
 // @flow
 
-import Component from 'vue-class-component';
-import Vue from 'vue';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component({
-  props: {
-    msg: String,
-  },
-})
+@Component
 export default class HelloWorld extends Vue {
   // initial data
-  msgEnd:string = '!!!'
+  msgEnd:string = '!!!';
+
+  @Prop()
+  msg: string;
 
   // lifecycle
   created(): void {

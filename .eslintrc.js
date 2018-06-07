@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     es6: true,
-    node: true
+    node: true,
   },
   extends: [
     'plugin:vue/essential',
@@ -13,18 +13,18 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'flowtype-errors/show-errors': 2,
     'flowtype-errors/show-warnings': 1,
-    'class-methods-use-this': 'off'
+    'class-methods-use-this': 'off',
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   plugins: [
     'flowtype',
-    'flowtype-errors'
+    'flowtype-errors',
   ],
   settings: {
     flowtype: {
-      onlyFilesWithFlowAnnotation: true
-    }
-  }
-}
+      onlyFilesWithFlowAnnotation: true,
+    },
+  },
+};
