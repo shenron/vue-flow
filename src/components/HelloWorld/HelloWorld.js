@@ -7,7 +7,7 @@ export default class HelloWorld extends Vue {
   // initial data
   msgEnd:string = '!!!';
 
-  @Prop()
+  @Prop({ type: String, required: true })
   msg: string;
 
   // lifecycle
