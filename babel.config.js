@@ -2,6 +2,9 @@ module.exports = {
   presets: [
     '@vue/app',
     '@babel/flow',
-    ['@babel/preset-stage-2', { loose: true, decoratorsLegacy: true }],
+  ],
+  plugins: [
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
   ],
 };
