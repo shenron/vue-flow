@@ -2,8 +2,9 @@
 
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
+export default
 @Component
-export default class HelloWorld extends Vue {
+class HelloWorld extends Vue {
   // initial data
   msgEnd:string = '!!!';
 
