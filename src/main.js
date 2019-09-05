@@ -2,21 +2,13 @@
 
 import Vue from 'vue';
 import App from '@/App.vue';
-import type { DemoType } from './DemoType.js.flow';
+import router from './router';
+import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false;
 
-const myDemoType: DemoType = {
-  str: () => {},
-  func: () => {},
-};
-
-const hello: string = 10;
-console.log(hello, myDemoType);
-
 new Vue({
+  router,
+  vuetify,
   render: h => h(App),
-  created() {
-    console.log(hello);
-  },
 }).$mount('#app');

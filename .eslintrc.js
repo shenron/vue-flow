@@ -17,6 +17,10 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint',
+    ecmaFeatures: {
+      // toggle to `false` to use `@decorator` between `export default` and `class` keywords
+      legacyDecorators: false,
+    },
   },
   plugins: [
     'flowtype',
