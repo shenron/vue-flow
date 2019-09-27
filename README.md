@@ -2,11 +2,10 @@
 
 - babel: `flow` added in presets
 - elsint: display errors with `flowtype`/`flowtype-errors`
+- vuetify: Vue Material Design Component
 
 ![eslint flow error](https://raw.githubusercontent.com/shenron/vue-flow/master/eslint-error.png)
 
 Related projects: 
 - https://github.com/shenron/babel-node-starter
 - https://github.com/shenron/flow-node-boilerplate
-
-NB: `vue` files are not checked, you have to split your component multiple files (html/js)
