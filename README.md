@@ -8,5 +8,3 @@
 Related projects: 
 - https://github.com/shenron/babel-node-starter
 - https://github.com/shenron/flow-node-boilerplate
-
-NB: `vue` files are not checked, you have to split your component multiple files (html/js)
