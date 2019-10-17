@@ -3,46 +3,48 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "flow:deps": "flow-typed install jest@22.x",
-    "flow": "flow",
-    "serve": "vue-cli-service serve --host 0.0.0.0 --port 8080",
     "build": "vue-cli-service build",
+    "flow": "flow",
+    "flow:deps": "flow-typed install jest@22.x",
     "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve --host 0.0.0.0 --port 8080",
     "test:unit": "vue-cli-service test:unit"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "dependencies": {
     "vue": "^2.6.10",
-    "vue-property-decorator": "^8.2.2"
+    "vue-property-decorator": "^8.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-flow": "^7.0.0",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-decorators": "^7.6.0",
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-plugin-unit-jest": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@vue/cli-plugin-babel": "^4.0.3",
+    "@vue/cli-plugin-eslint": "^4.0.3",
+    "@vue/cli-plugin-unit-jest": "^4.0.3",
+    "@vue/cli-service": "^4.0.3",
     "@vue/eslint-config-airbnb": "^4.0.1",
     "@vue/test-utils": "^1.0.0-beta.18",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "eslint": "^6.5.1",
     "eslint-plugin-flowtype": "^4.3.0",
     "eslint-plugin-flowtype-errors": "^4.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "flow-bin": "^0.108.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "flow-bin": "^0.109.0",
     "flow-typed": "^2.6.1",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  }
 }
