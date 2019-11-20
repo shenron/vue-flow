@@ -30,11 +30,6 @@ const useButton = () => {
 
 export default createComponent({
   setup() {
-    const { state, incrementCpt } = useButton();
-
-    return {
-      state,
-      incrementCpt,
-    };
+    return useButton();
   },
 });
