@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
-/dist
-/flow-typed
+dist
+/flow-typed/*
+!/flow-typed/vue-composition-api.js
 
 # local env files
 .env.local
