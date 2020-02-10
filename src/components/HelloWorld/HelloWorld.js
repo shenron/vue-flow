@@ -13,7 +13,7 @@ class HelloWorld extends Vue {
 
   // lifecycle
   created(): void {
-    this.printInConsole('Im created');
+    this.printInConsole(`Im created: ${this.msgEnd}`);
   }
 
   // method
