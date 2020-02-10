@@ -2,6 +2,8 @@
 
 - babel: `flow` added in presets
 - elsint: display errors with `flowtype`/`flowtype-errors`
+- `@vue/composition-api` used to create component with hook style
+- `vue-property-decorator` used to create component with class style
 
 ![eslint flow error](https://raw.githubusercontent.com/shenron/vue-flow/master/eslint-error.png)
 
