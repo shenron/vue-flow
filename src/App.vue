@@ -8,6 +8,8 @@
 </template>
 
 <script>
+// @flow
+
 import HelloWorld from './components/HelloWorld/HelloWorld.vue';
 import CompositionCmp from './components/CompositionCmp/CompositionCmp.vue';
 
