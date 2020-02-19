@@ -11,7 +11,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@vue/composition-api": "^0.3.4",
+    "@vue/composition-api": "^0.4.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-property-decorator": "^8.4.0"
@@ -32,9 +32,9 @@
     "eslint-plugin-flowtype": "^4.6.0",
     "eslint-plugin-flowtype-errors": "^4.1.0",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-vue": "^6.1.2",
+    "eslint-plugin-vue": "^6.2.1",
     "flow-bin": "^0.118.0",
-    "flow-typed": "^2.6.2",
+    "flow-typed": "^3.0.0",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"

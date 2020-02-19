@@ -1,7 +1,7 @@
 // @flow
 
 import {
-  createComponent,
+  defineComponent,
   reactive,
   ref,
   watch,
@@ -18,9 +18,12 @@ const useButton = () => {
     cpt.value += 1;
   };
 
-  watch(cpt, (newValue: number) => {
-    console.log(`cpt changed: ${newValue}`);
-  });
+  watch(
+    () => cpt.value,
+    (newValue: number) => {
+      console.log(`cpt changed: ${newValue}`);
+    },
+  );
 
   return {
     state,
@@ -28,7 +31,7 @@ const useButton = () => {
   };
 };
 
-export default createComponent({
+export default defineComponent({
   setup() {
     return useButton();
   },
