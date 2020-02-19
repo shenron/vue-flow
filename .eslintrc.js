@@ -5,6 +5,7 @@ module.exports = {
     node: true,
   },
   extends: [
+    'plugin:flowtype/recommended',
     'plugin:vue/essential',
     '@vue/airbnb',
   ],

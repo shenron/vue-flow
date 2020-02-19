@@ -1,38 +1,32 @@
 // @flow
 
-import {
-  defineComponent,
-  reactive,
-  ref,
-  watch,
-} from '@vue/composition-api';
+import { defineComponent } from '@vue/composition-api';
+import renderHelper from '@/renderHelper';
+import useCompositionCmp from './useCompositionCmp';
+import useRender from './useRender';
 
-const useButton = () => {
-  const cpt = ref<number>(0);
+export type Props = {|
+  initialCpt: number;
+|};
 
-  const state = reactive({
-    cpt,
-  });
-
-  const incrementCpt = () => {
-    cpt.value += 1;
-  };
-
-  watch(
-    () => cpt.value,
-    (newValue: number) => {
-      console.log(`cpt changed: ${newValue}`);
-    },
-  );
-
-  return {
-    state,
-    incrementCpt,
-  };
-};
+export type CompositionCmp = {|
+  ...ExtractReturn<typeof useCompositionCmp>,
+  ...Props,
+|};
 
 export default defineComponent({
-  setup() {
-    return useButton();
+  props: {
+    initialCpt: {
+      type: Number,
+      default() {
+        return 100;
+      },
+    },
+  },
+  setup(props) {
+    return useCompositionCmp(props);
+  },
+  render(h) {
+    return useRender(h, renderHelper<CompositionCmp>(this));
   },
 });

@@ -1,6 +1,8 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset',
+    '@vue/babel-preset-jsx',
+    // Un comment `@vue/cli-plugin-babel/preset'` if jsx is not used
+    // '@vue/cli-plugin-babel/preset',
     '@babel/flow',
   ],
   plugins: [

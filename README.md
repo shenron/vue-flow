@@ -4,6 +4,7 @@
 - elsint: display errors with `flowtype`/`flowtype-errors`
 - `@vue/composition-api` used to create component with hook style
 - `vue-property-decorator` used to create component with class style
+- `jsx` has been used to be able to check types in "html"
 
 ![eslint flow error](https://raw.githubusercontent.com/shenron/vue-flow/master/eslint-error.png)
 

@@ -3,6 +3,8 @@ node_modules
 dist
 /flow-typed/*
 !/flow-typed/vue-composition-api.js
+!/flow-typed/react.js
+!/flow-typed/global.js
 
 # local env files
 .env.local
