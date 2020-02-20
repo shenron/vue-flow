@@ -2,18 +2,18 @@
 
 import { type CompositionCmp } from './CompositionCmp'; // eslint-disable-line import/no-cycle
 
-const useRender: (any, CompositionCmp) => Object = (h, {
-  incrementCpt,
-  state,
-  initialCpt,
-}) => <div>
-  <h3>Compostion Component</h3>
+type UseRender = (any, CompositionCmp) => Object;
 
-  <h2>Initial value { initialCpt }</h2>
-
+const useRender: UseRender = (h, { incrementCpt, state, initialCpt }) => (
   <div>
-    <button vOn:click={ incrementCpt }>+</button> { state.cpt }
+    <h3>Composition Component</h3>
+
+    <h2>Initial value { initialCpt }</h2>
+
+    <div>
+      <button vOn:click={ incrementCpt }>+</button> { state.cpt }
+    </div>
   </div>
-</div>;
+);
 
 export default useRender;

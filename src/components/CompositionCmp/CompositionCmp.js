@@ -1,20 +1,21 @@
 // @flow
 
 import { defineComponent } from '@vue/composition-api';
-import renderHelper from '@/renderHelper';
 import useCompositionCmp from './useCompositionCmp';
 import useRender from './useRender';
 
+// Component Properties
 export type Props = {|
   initialCpt: number;
 |};
 
+// Composition arguments
 export type CompositionCmp = {|
   ...ExtractReturn<typeof useCompositionCmp>,
   ...Props,
 |};
 
-export default defineComponent({
+export default defineComponent<Props>({
   props: {
     initialCpt: {
       type: Number,
@@ -27,6 +28,6 @@ export default defineComponent({
     return useCompositionCmp(props);
   },
   render(h) {
-    return useRender(h, renderHelper<CompositionCmp>(this));
+    return useRender(h, this);
   },
 });

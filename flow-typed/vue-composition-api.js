@@ -49,25 +49,20 @@ declare module '@vue/composition-api' {
   declare export function provide(symbol, ?Ref<any>): void;
   declare export function inject<T>(symbol, Ref<T>): Ref<T>;
   declare export function ref<T>(defaultValue?: ?T): Ref<T>;
-  declare export function defineComponent({|
+  declare export function defineComponent<T>({|
     functional?: boolean,
     render?: (...Render) => Vue,
     name?: string,
     inheritAttrs?: boolean,
-    // custom attribute to build route before launch of webpack
-    route?: {|
-      path: string,
-      name: string,
-    |},
     components?: {[id: string]: Vue},
     directives?: {[id: string]: Vue},
-    props?: $ReadOnly<ObjType>,
+    props?: $ReadOnly<{[$Keys<T>]: any}>,
     setup?: (
-      Object,
+      T,
       Context,
     ) => { [id: string]: mixed } | void,
   |}): any;
-  declare export function reactive(ObjType): ObjType;
+  declare export function reactive<T: ObjType>(T): T;
 
   // it's possible to have one parameter to listen all changes
   declare export function watch<T = mixed>(
