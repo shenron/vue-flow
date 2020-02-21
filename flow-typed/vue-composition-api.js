@@ -31,6 +31,10 @@ type FunctionalRenderContext = {|
 |}
 
 declare module '@vue/composition-api' {
+  declare export type Component<Fn, T> = {|
+    ...$Call<<N>((...Iterable<any>) => N) => N, Fn>,
+    ...T,
+  |};
   declare export type Ref<T> = {| value: T |};
   declare export type Listeners = { [id: string]: Function };
   declare export type Emit = (string, ...any) => void;
