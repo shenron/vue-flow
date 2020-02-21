@@ -2,7 +2,7 @@
 
 import {
   defineComponent,
-  type Component,
+  type Public,
 } from '@vue/composition-api';
 import useCompositionCmp from './useCompositionCmp';
 import useRender from './useRender';
@@ -13,7 +13,7 @@ export type Props = {|
 |};
 
 // Composition arguments
-export type CompositionCmp = Component<typeof useCompositionCmp, Props>;
+export type CompositionCmp = Public<typeof useCompositionCmp, Props>;
 
 export default defineComponent<Props>({
   props: {

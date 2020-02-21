@@ -31,7 +31,7 @@ type FunctionalRenderContext = {|
 |}
 
 declare module '@vue/composition-api' {
-  declare export type Component<Fn, T> = {|
+  declare export type Public<Fn, T> = {|
     ...$Call<<N>((...Iterable<any>) => N) => N, Fn>,
     ...T,
   |};
