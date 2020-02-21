@@ -15,6 +15,7 @@ module.exports = {
     'flowtype-errors/show-errors': 2,
     'flowtype-errors/show-warnings': 1,
     'class-methods-use-this': 'off',
+    'import/no-named-as-default': 0,
   },
   parserOptions: {
     parser: 'babel-eslint',
