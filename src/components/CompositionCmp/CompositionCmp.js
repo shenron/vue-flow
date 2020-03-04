@@ -28,6 +28,6 @@ export default defineComponent<Props>({
     return useCompositionCmp(props);
   },
   render(h) {
-    return useRender(h, this);
+    return useRender.call(this, h, this); // call fix v-model
   },
 });

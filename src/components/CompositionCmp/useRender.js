@@ -1,19 +1,25 @@
 // @flow
 
 import { type CompositionCmp } from './CompositionCmp'; // eslint-disable-line import/no-cycle
+import style from './CompositionCmp.scss';
 
 type UseRender = (any, CompositionCmp) => Object;
 
-const useRender: UseRender = (h, { incrementCpt, state, initialCpt }) => (
-  <div>
-    <h3>Composition Component</h3>
+const useRender: UseRender = (h, props) => {
+  const { incrementCpt, state, initialCpt } = props;
 
-    <h2>Initial value { initialCpt }</h2>
+  return (
+    <div class={style.compositionCmp}>
+      <h3>Composition Component</h3>
 
-    <div>
-      <button vOn:click={ incrementCpt }>+</button> { state.cpt }
+      <h2>Initial value {initialCpt}</h2>
+
+      <div>
+        <button vOn:click={incrementCpt}>+</button>
+        {state.cpt}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default useRender;

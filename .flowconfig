@@ -7,6 +7,8 @@ esproposal.decorators=ignore
 module.file_ext=.vue
 module.file_ext=.js
 module.file_ext=.jsx
+module.file_ext=.scss
+module.file_ext=.css
 module.name_mapper='^@/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 
 [ignore]
