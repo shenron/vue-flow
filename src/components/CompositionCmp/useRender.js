@@ -1,12 +1,11 @@
 // @flow
 
+import value from '@/compositions/getRefValue';
 import { type CompositionCmp } from './CompositionCmp'; // eslint-disable-line import/no-cycle
 import style from './CompositionCmp.scss';
 
-type UseRender = (any, CompositionCmp) => Object;
-
-const useRender: UseRender = (h, props) => {
-  const { incrementCpt, state, initialCpt } = props;
+export default function (h: any, props: CompositionCmp) {
+  const { incrementCpt, cpt, initialCpt } = value(props);
 
   return (
     <div class={style.compositionCmp}>
@@ -16,10 +15,8 @@ const useRender: UseRender = (h, props) => {
 
       <div>
         <button vOn:click={incrementCpt}>+</button>
-        {state.cpt}
+        {cpt}
       </div>
     </div>
   );
-};
-
-export default useRender;
+}

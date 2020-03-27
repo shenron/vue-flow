@@ -1,18 +1,14 @@
 // @flow
 
 import {
-  reactive,
   ref,
+  computed,
   watch,
 } from '@vue/composition-api';
 import { type Props } from './CompositionCmp'; // eslint-disable-line import/no-cycle
 
-const useCompositionCmp = (props: Props) => {
+export default function (props: Props) {
   const cpt = ref<number>(props.initialCpt);
-
-  const state = reactive({
-    cpt,
-  });
 
   const incrementCpt = () => {
     cpt.value += 1;
@@ -35,9 +31,7 @@ const useCompositionCmp = (props: Props) => {
   );
 
   return {
-    state,
+    cpt: computed<number>(() => cpt.value),
     incrementCpt,
   };
-};
-
-export default useCompositionCmp;
+}
