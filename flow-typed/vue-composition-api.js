@@ -63,6 +63,7 @@ declare module '@vue/composition-api' {
     route?: {|
       path: string,
       name: string,
+      meta?: Object,
     |},
     functional?: boolean,
     render?: (...Render) => Vue,

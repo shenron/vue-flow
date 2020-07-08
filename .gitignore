@@ -5,6 +5,7 @@ dist
 !/flow-typed/vue-composition-api.js
 !/flow-typed/react.js
 !/flow-typed/global.js
+!/flow-typed/vue-router.js
 
 # local env files
 .env.local
