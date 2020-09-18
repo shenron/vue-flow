@@ -6,10 +6,12 @@
     "build": "vue-cli-service build",
     "flow": "flow",
     "flow:deps": "flow-typed install jest@22.x",
-    "lint": "vue-cli-service lint",
-    "lint:fix": "vue-cli-service lint --fix",
+    "check-types": "tsc --noemit",
+    "lint": "vue-cli-service lint && npm run check-types",
+    "lint:fix": "vue-cli-service lint --fix && npm run check-types",
     "serve": "vue-cli-service serve --host 0.0.0.0 --port 8080",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "eslint": "eslint"
   },
   "dependencies": {
     "@vue/composition-api": "^0.6.7",
