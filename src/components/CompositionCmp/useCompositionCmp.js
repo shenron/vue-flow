@@ -7,7 +7,7 @@ import {
 } from '@vue/composition-api';
 import { type Props } from './CompositionCmp'; // eslint-disable-line import/no-cycle
 
-export default function (props: Props) {
+export default function (props: Props): any {
   const cpt = ref<number>(props.initialCpt);
 
   const incrementCpt = () => {

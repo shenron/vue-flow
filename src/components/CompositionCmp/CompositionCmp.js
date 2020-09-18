@@ -2,6 +2,7 @@
 
 import {
   defineComponent,
+  type Component,
   type UseProps,
 } from '@vue/composition-api';
 import useCompositionCmp from './useCompositionCmp';
@@ -15,7 +16,7 @@ export type Props = {|
 // Composition arguments
 export type CompositionCmp = UseProps<typeof useCompositionCmp, Props>;
 
-export default defineComponent<Props>({
+const cmp: Component = defineComponent<Props>({
   props: {
     initialCpt: {
       type: Number,
@@ -31,3 +32,6 @@ export default defineComponent<Props>({
     return useRender.call(this, h, this); // call fix v-model
   },
 });
+
+
+export default cmp;

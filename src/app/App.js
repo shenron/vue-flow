@@ -1,10 +1,15 @@
 // @flow
 
-import { defineComponent } from '@vue/composition-api';
+import {
+  defineComponent,
+  type Component,
+} from '@vue/composition-api';
 import useRender from './useRender';
 
-export default defineComponent({
+const cmp: Component = defineComponent({
   render(h) {
     return useRender(h);
   },
 });
+
+export default cmp;

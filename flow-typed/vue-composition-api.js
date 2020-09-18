@@ -1,10 +1,14 @@
 // @flow
 
-import type Vue from 'vue';
+import vue from 'vue';
 
-type ObjType = { [id: string]: any }; // eslint-disable-line no-unused-vars
+type Vue = typeof vue;
 
-type VNode = {|
+type ObjType = { [id: string]: any };
+
+type $Component = { [id: string]: any };
+
+export type $VNode = {|
   data: {
     style: Object,
     class?: { [id: string]: boolean },
@@ -19,7 +23,7 @@ type VNode = {|
 
 type FunctionalRenderContext = {|
   scopedSlots: {
-    [id: string]: () => Array<VNode>,
+    [id: string]: () => Array<$VNode>,
   },
   props: {
     [id: string]: any,
@@ -31,6 +35,8 @@ type FunctionalRenderContext = {|
 |}
 
 declare module '@vue/composition-api' {
+  declare export type Component = $Component;
+  declare export type VNode = $VNode;
   declare export type UseProps<Fn, T = {||}> = {|
     ...$Call<<N>((...Iterable<any>) => N) => N, Fn>,
     ...T,
@@ -76,7 +82,7 @@ declare module '@vue/composition-api' {
       T,
       Context,
     ) => mixed | void,
-  |}): Object;
+  |}): Component;
 
   declare export function reactive<T: ObjType>(T): T;
 
