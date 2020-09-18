@@ -6,10 +6,6 @@ module.exports = {
       polyfills: [],
     }],
     '@babel/preset-flow',
-    ['@babel/preset-typescript', {
-      isTSX: true,
-      allExtensions: true,
-    }],
   ],
   plugins: [
     ['@babel/plugin-proposal-decorators', { legacy: true }],

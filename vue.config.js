@@ -11,7 +11,7 @@ module.exports = {
 
     config.module
       .rule('compile')
-      .test(/\.tsx$/)
+      .test(/\.(ts|js)x?$/)
       .use('babel')
       .loader('babel-loader');
   },

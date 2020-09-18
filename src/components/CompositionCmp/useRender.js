@@ -3,8 +3,7 @@
 import { type VNode } from '@vue/composition-api';
 import value from '@/compositions/getRefValue';
 import { type CompositionCmp } from './CompositionCmp'; // eslint-disable-line import/no-cycle
-
-const style = {};
+import style from './style.scss';
 
 export default function (h: any, props: CompositionCmp): VNode {
   const { incrementCpt, cpt, initialCpt } = value(props);
