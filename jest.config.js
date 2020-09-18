@@ -1,6 +1,3 @@
 module.exports = {
-  preset: [
-    '@vue/babel-preset-jsx',
-    '@vue/cli-plugin-unit-jest',
-  ],
+  preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
 };
