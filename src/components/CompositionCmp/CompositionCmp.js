@@ -33,5 +33,4 @@ const cmp: Component = defineComponent<Props>({
   },
 });
 
-
 export default cmp;

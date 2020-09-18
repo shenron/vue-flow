@@ -4,6 +4,17 @@ module.exports = {
   css: {
     requireModuleExtension: false,
   },
+  chainWebpack: (config) => {
+    config.resolve.extensions
+      .prepend('.ts')
+      .prepend('.tsx');
+
+    config.module
+      .rule('compile')
+      .test(/\.tsx$/)
+      .use('babel')
+      .loader('babel-loader');
+  },
   devServer: {
     watchOptions: {
       ignored: /node_modules/,

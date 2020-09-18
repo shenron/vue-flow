@@ -20,6 +20,9 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: [
     'flowtype',
@@ -28,6 +31,11 @@ module.exports = {
   settings: {
     flowtype: {
       onlyFilesWithFlowAnnotation: true,
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
   },
 };
