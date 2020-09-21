@@ -3,7 +3,8 @@
 It can be confusing to see FlowJS + Typescript. The idea is not to create the perfect startup, but try to add Typescript 
 in an existing project with Babel (with or without FlowJS).
 
-- babel: `typescript/flow/jsx` added in [presets](./babel.config.js)
+- Typescript / TSX: [App.ts](./src/app/)
+- babel: `typescript/flow/jsx` added in [presets](./.babelrc.js)
 - eslint: display errors with [`flowtype`/`flowtype-errors`](./.eslintrc.js)
 - `composition-api` used to create component with [hook style](./src/components/CompositionCmp/CompositionCmp.js)
 - `vue-property-decorator` used to create component with [class style](./src/components/HelloWorld/HelloWorld.js)
