@@ -17,6 +17,9 @@ module.exports = {
     'class-methods-use-this': 'off',
     'import/no-named-as-default': 0,
     'func-names': 0,
+
+    // flow try to understand ts
+    'flowtype/no-types-missing-file-annotation': 0,
   },
   parserOptions: {
     parser: 'babel-eslint',
@@ -32,10 +35,13 @@ module.exports = {
     flowtype: {
       onlyFilesWithFlowAnnotation: true,
     },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts', '.tsx'],
-      },
-    },
+    'import/extensions': ['error', 'ignorePackages', {
+      vue: 'never',
+      js: 'never',
+      mjs: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
   },
 };

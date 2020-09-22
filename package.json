@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
+    "check-types": "tsc --noemit",
+    "eslint": "eslint",
     "flow": "flow",
     "flow:deps": "flow-typed install jest@22.x",
-    "check-types": "tsc --noemit",
     "lint": "vue-cli-service lint && npm run check-types",
     "lint:fix": "vue-cli-service lint --fix && npm run check-types",
     "serve": "vue-cli-service serve --host 0.0.0.0 --port 8080",
-    "test:unit": "vue-cli-service test:unit",
-    "eslint": "eslint"
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "@vue/composition-api": "^0.6.7",
@@ -33,8 +33,8 @@
     "@vue/test-utils": "^1.1.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "core-js": "^3.6.5",
     "eslint": "^7.9.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-flowtype-errors": "^4.3.0",
     "eslint-plugin-import": "^2.22.0",
