@@ -3,8 +3,6 @@ flow-typed
 
 [options]
 include_warnings=true
-esproposal.optional_chaining=enable
-esproposal.decorators=ignore
 module.file_ext=.vue
 module.file_ext=.js
 module.file_ext=.jsx

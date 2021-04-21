@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies,@typescript-eslint/no-var-requires
 const { defaults } = require('jest-config');
 
 module.exports = {

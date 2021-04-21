@@ -1,5 +1,17 @@
-// default config
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 module.exports = {
+  configureWebpack: {
+    plugins: [
+      new ForkTsCheckerWebpackPlugin({
+        eslint: {
+          // required - same as command `eslint ./src/**/*.{ts,tsx,js,jsx} --ext .ts,.tsx,.js,.jsx`
+          files: './src/**/*.{ts,tsx,js,jsx}',
+        },
+      }),
+    ],
+  },
   lintOnSave: process.env.NODE_ENV !== 'production',
   css: {
     requireModuleExtension: false,
